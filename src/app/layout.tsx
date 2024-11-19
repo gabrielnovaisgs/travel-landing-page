@@ -1,17 +1,29 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/components/header";
+import localFont from 'next/font/local'
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
+
+import { Inter } from 'next/font/google'
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter'
+
+})
+
+const circularStd = localFont({
+  src: [{
+    path: './fonts/CircularStd-Bold.woff2',
+    weight: 'bold',
+    style: 'normal'
+  }],
+  variable: '--font-circular-std'
+})
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,8 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased ${inter.variable} ${circularStd.variable} font-sans`}
       >
+        <Header></Header>
         {children}
       </body>
     </html>
