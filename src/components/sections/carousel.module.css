@@ -1,0 +1,38 @@
+
+.carousel {
+        mask-image: linear-gradient(to right,
+            transparent,
+            #000 10% 90%,
+            transparent);
+}
+
+.image{
+  
+    position: absolute;
+    object-fit: contain;
+    object-position: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    animation-delay: calc(2s * (var(--position) - 1));
+    transition: filter 0.5s;
+}
+
+@keyframes autoRun {
+    from {
+        left: 100%;
+    }
+    to {
+       left: -200px;
+    }
+}
+
+/*
+1 = 0
+2 = 2
+3 = 4
+
+
+*/
