@@ -12,10 +12,10 @@ interface Props {
 export default function MobileMenu({ menuState, toogleMenu }: Props) {
 
     return (
-        <div className="flex
+        <div className="flex 
      md:hidden     
      ">
-            <div className={`${menuState ? "pointer-events-auto bg-primary/20" : "pointer-events-none opacity-0 "} left-0 absolute  top-0 
+            <div className={`${menuState ? "pointer-events-auto bg-primary/20" : "pointer-events-none opacity-0 "} left-0 absolute  -top-2 
             w-screen h-screen  shadow-md backdrop-blur-sm duration-500
             -z-10 `}
                 onClick={toogleMenu}
@@ -23,7 +23,7 @@ export default function MobileMenu({ menuState, toogleMenu }: Props) {
 
             </div>
             <div className={`flex flex-col justify-between py-8 px-4 items-center fixed 
-            h-[calc(100%-1rem)] top-2  w-3/4  shadow-md rounded-l-3xl bg-white
+            h-[calc(100dvh-1rem)] top-2  w-3/4  shadow-md rounded-l-3xl bg-white
             transition-all duration-500 ease-in-out
             ${menuState ? "right-0" : "-right-full"}
             

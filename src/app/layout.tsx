@@ -39,10 +39,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased ${inter.variable} ${circularStd.variable} font-sans`}
+        className={`antialiased ${inter.variable} ${circularStd.variable} font-sans relative`}
       >
 
-        <div className="w-1/2 h-1/2 absolute rounded-full -z-10 left-0 top-0 -translate-x-1/2 -translate-y-1/2
+        <div className="w-3/4 h-1/2 absolute rounded-full -z-10 left-0 top-0 -translate-x-1/2 -translate-y-1/2
         bg-[radial-gradient(circle_at_center,#FF5722,transparent)] opacity-40 blur-3xl
         overflow-x-hidden
         "></div>
