@@ -3,6 +3,7 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { useRef } from "react";
+import SectionTitle from "../section-title";
 
 
 export default function ServicesSection() {
@@ -48,14 +49,10 @@ export default function ServicesSection() {
     return (
         <section className="flex flex-col gap-4 items-center overflow-hidden my-8
             md:grid md:grid-cols-[1fr_2fr] md:items-center md:gap-2 md:justify-between">
-            <div className="text-center md:col-start-1 ">
-                <h2 className="text-xl text-center font-bold text-secondary font-header
-                md:col-start-1 md:text-left
-            " > Services</h2>
-                <p className="font-bold text-2xl text-center
-            md:col-start-1 md:text-left
-            ">Our top value categories for you</p>
-            </div>
+            <SectionTitle className="md:col-start-1" title="Services" subTitle="Our top value categories for you">
+
+            </SectionTitle>
+
             <div ref={carouselRef} className={` 
             
                 relative h-64 w-full 
@@ -91,10 +88,10 @@ export default function ServicesSection() {
             <div className="flex gap-4  text-xl justify-center md:col-start-2">
                 <button
                     onClick={() => gotToElement('prev')}
-                    className="w-16  h-16 flex justify-center items-center border rounded-full bg-white"><FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon></button>
+                    className="w-16  h-16 flex justify-center items-center border rounded-full bg-white transition-all active:bg-slate-100"><FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon></button>
                 <button
                     onClick={() => gotToElement('next')}
-                    className="w-16 h-16 flex justify-center items-center border rounded-full bg-primary text-white"><FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></button>
+                    className="w-16 h-16 flex justify-center items-center border rounded-full bg-primary text-white active:bg-primary/90 transition-all"><FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></button>
             </div>
         </section>
     )
