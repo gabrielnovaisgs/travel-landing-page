@@ -1,5 +1,6 @@
 import CaroulselSection from "@/components/sections/carousel-section";
 import HeroSection from "@/components/sections/hero-section";
+import NewsLetterSection from "@/components/sections/news-letter-section";
 import ServicesSection from "@/components/sections/services-section";
 import TopDestinationsSection from "@/components/sections/top-destinations-section";
 
@@ -19,6 +20,7 @@ export default function Home() {
       <CaroulselSection />
       <ServicesSection />
       <TopDestinationsSection />
+      <NewsLetterSection />
     </div>
   );
 }
