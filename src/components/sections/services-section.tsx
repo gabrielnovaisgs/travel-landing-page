@@ -46,13 +46,20 @@ export default function ServicesSection() {
 
     }
     return (
-        <section className="flex flex-col gap-4 items-center overflow-hidden">
-            <h2 className="text-xl font-bold text-secondary font-header" > Services</h2>
-            <p className="font-bold text-2xl text-center">Our top value categories for you</p>
+        <section className="flex flex-col gap-4 items-center overflow-hidden my-8
+            md:grid md:grid-cols-[1fr_2fr] md:items-center md:gap-2 md:justify-between">
+            <div className="text-center md:col-start-1 ">
+                <h2 className="text-xl text-center font-bold text-secondary font-header
+                md:col-start-1 md:text-left
+            " > Services</h2>
+                <p className="font-bold text-2xl text-center
+            md:col-start-1 md:text-left
+            ">Our top value categories for you</p>
+            </div>
             <div ref={carouselRef} className={` 
             
-                relative h-60 w-full 
-               
+                relative h-64 w-full 
+         
 }
             [&>*:nth-child(1)]:-left-[200%] 
             [&>*:nth-child(2)]:left-1/2 [&>*:nth-child(2)]:translate-x-[calc(-110%-50%)]  
@@ -60,12 +67,14 @@ export default function ServicesSection() {
             [&>*:nth-child(3)]:shadow-lg [&>*:nth-child(3)]:shadow-primary/20 [&>*:nth-child(3)]:border-primary/20  [&>*:nth-child(3)]:opacity-100
             [&>*:nth-child(4)]:left-1/2 [&>*:nth-child(4)]:translate-x-[calc(110%-50%)] 
             [&>*:nth-child(n+5)]:left-[200%]   
+
+            md:col-start-2 md:row-start-1 md:overflow-hidden
             `}>
                 {items.map((item, index) => (
 
                     <div key={index}
                         className={`
-                 absolute h-60 w-56
+                 absolute h-60 w-56 top-2
                 transition-all duration-500 
         py-8 px-12 flex flex-col border border-primary/10 translate-y-[0.5rem] bg-white opacity-60  text-center rounded-3xl `}>
 
@@ -79,7 +88,7 @@ export default function ServicesSection() {
 
 
             </div>
-            <div className="flex gap-4 text-xl">
+            <div className="flex gap-4  text-xl justify-center md:col-start-2">
                 <button
                     onClick={() => gotToElement('prev')}
                     className="w-16  h-16 flex justify-center items-center border rounded-full bg-white"><FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon></button>
