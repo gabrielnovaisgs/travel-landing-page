@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useState } from "react";
 import MobileMenu from "./mobile-header";
 import PrimaryButton from "./primary-button";
+import Image from "next/image";
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -17,7 +18,9 @@ export default function Header() {
     return (
         <header className="grid grid-cols-[1fr_3fr_1fr] fixed w-full
      items-center px-8 py-4 z-50 bg-white/20 backdrop-blur h-14 md:h-20">
-            <div className="col-start-2 justify-self-center md:justify-self-start  md:col-start-1">Logo</div>
+            <div className="col-start-2 justify-self-center md:justify-self-start  md:col-start-1">
+                <Image src={"/images/logo.svg"} width={100} height={100} alt="logo"></Image>
+            </div>
 
             <ul className="
             justify-self-center

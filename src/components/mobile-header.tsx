@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MenuLink from "./menu/menu-link";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-
+import Image from "next/image";
 
 interface Props {
     menuState: boolean
@@ -30,7 +30,7 @@ export default function MobileMenu({ menuState, toogleMenu }: Props) {
            
             `}>
                 <div className="grid grid-cols-3 items-center w-full ">
-                    <p className="col-start-2 justify-self-center">Logo</p>
+                    <p className="col-start-2 justify-self-center"><Image src={"/images/logo.svg"} width={100} height={100} alt="logo"></Image></p>
 
                     <button onClick={toogleMenu} className="col-start-3 justify-self-end text-primary">
                         <FontAwesomeIcon icon={faArrowRight} size="xl"></FontAwesomeIcon>

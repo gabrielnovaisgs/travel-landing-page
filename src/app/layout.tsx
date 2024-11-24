@@ -8,6 +8,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
 import { Inter } from 'next/font/google'
+import Footer from "@/components/footer";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -43,6 +44,7 @@ export default function RootLayout({
         <Header></Header>
 
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );
