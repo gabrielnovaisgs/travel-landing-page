@@ -10,26 +10,27 @@ export default function ServicesSection() {
 
     const items: { description: string, title: string }[] = [
         {
-            description: "Square, was moving across the sand in their direction.",
+            description: "Plan and book your dream vacation effortlessly with our user-friendly platform.",
             title: "Easy Booking"
         },
         {
-            description: "Text 2",
-            title: "Easy Booking"
+            description: "Discover exclusive deals on flights, hotels, and tours tailored to your needs.",
+            title: "Exclusive Deals"
         },
         {
-            description: "Text 3",
-            title: "Easy Booking"
+            description: "Choose from handpicked accommodations for a comfortable and memorable stay.",
+            title: "Quality Accommodations"
         },
         {
-            description: "Text 4",
-            title: "Easy Booking"
+            description: "Explore personalized tours and experiences designed to create unforgettable memories.",
+            title: "Custom Tours"
         },
         {
-            description: "Text 5",
-            title: "Easy Booking"
+            description: "Count on our 24/7 support team to assist you at every step of your journey.",
+            title: "24/7 Support"
         }
-    ]
+    ];
+
 
     const carouselRef = useRef<HTMLDivElement>(null)
 
